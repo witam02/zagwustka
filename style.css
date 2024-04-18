@@ -1,0 +1,78 @@
+*{
+    font-family: Tahoma;
+}
+body{
+    background-image: url(4x.gif);
+}
+.status, .result {
+    font-size:20px;
+
+}
+.board__row, h1, .result, .status, .reset {
+    display:flex;
+    justify-content: center;
+    color: white;
+}
+#resetBtn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.board__cell {
+    width:6em;
+    height:6em;
+    border:2px solid gray;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.board__cell:hover{
+    background-color: lightgray;
+}
+
+.board__cell--kolko {
+    background-image: url(kolko.png);
+    background-size: cover;
+}
+
+.board__cell--krzyzyk {
+    background-image: url(krzyzyk.png);
+    background-size: cover;
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .board__row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .board__cell {
+        width: 10em;
+        height: 10em;
+    }
+    #resetbtn{
+        padding: 1em 1em;
+        font-size: 2em;
+    }
+    h1{
+        font-size: 5em;
+    }
+    .status{
+        font-size: 5em;
+    }
+    .result{
+        font-size: 5em;
+    }
+}
